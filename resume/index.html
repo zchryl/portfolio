@@ -1,150 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="..\style.css">
 </head>
+
 <body>
-    
+
     <nav>
         <ul>
-            
-            <li><a href = "..\index.html"> Homepage </a></li>
-            <li><a href = "..\projects\index.html">Projects</a></li>
-            <li><a href = "..\contact\index.html">Contact Me</a></li>
-            <li><a href = "index.html"> My Resume </a></li>
-            <li><a href = "https://github.com/zchryl" target = "_blank"> My Github Profile!</a></li>
+
+            <li><a href="..\index.html"> Homepage </a></li>
+            <li><a href="..\projects\index.html">Projects</a></li>
+            <li><a href="..\contact\index.html">Contact Me</a></li>
+            <li><a class="current" href="index.html"> My Resume </a></li>
+            <li><a href="https://github.com/zchryl" target="_blank"> My Github Profile!</a></li>
 
         </ul>
 
     </nav>
     <h1>My Resume</h1>
 
-    <section>
-        <h2>Education</h2>
+    <div class='resume'>
+        <section class='left'>
+            <section>
+                <h2>Education</h2>
 
-        <article>
+                <article>
 
-            <h4>University of California, CA</h4>
-            <h5>Expected Graduation: <time datetime = "2027-06-00">June 2027</time>  </h5>
-            <h5>GPA: 3.928</h5>
+                    <h4>University of California, CA</h4>
+                    <h5>Expected Graduation: <time datetime="2027-06-00">June 2027</time> </h5>
+                    <h5>GPA: 3.928</h5>
 
-            <ul>
-                <li><p>Understanding of the principles, theory, and analysis of data science with experience in Python’s “pandas” library, PyTorch, Java, R, SQL, HTML/CSS, Javascript</p></li>
-                <li><p>Learning conceptual theories and mathematical foundations underlying Machine Learning, Natural Language Models, and Neural Networks</p></li>
-                <li><p>Conceptual Algorithm skills: runtime and data structure evaluation, doctest construction</p></li>
-                <li><p>Collaborated in research project proposal and data science projects that involved data collection, example data generation, experiment construction, hypothesis testing, report writing and result presentation</p></li>
-                <li><p>Completed upper level courses in statistical methods, quantitative methods and statistical techniques for analyzing big data, data management</p></li>
-                <li><p>Experience in Github for Team-based and Individual projects</p></li>
-                <li><p>Future courses: data mining, modeling, visualization, systems for scalable analytics</p></li>
-
-                
-            </ul>
-
-        </article>
-        
-
-            
-        <article>
-
-            <h4>California High School, CA</h4>
-            <h5>Graduated: <time datetime = "2023-06-00">June 2023</time></h5>
-            <h5>GPA: 4.34</h5>
-
-            <ul>
-                <li><p>App Academy			<time datetime = "2019-08-00">August 2019</time> to <time datetime = "2023-08-00">2023</time></p></li>
-                <li><p>Math Club			<time datetime = "2019-08-00">August 2017</time> to <time datetime = "2021-05-00">May 2021</time></p></li>
-                <li><p>Tennis Team			<time datetime = "2019-08-00">August 2019</time> to <time datetime = "2020-03-00">March 2020</time></p></li>
-            </ul>
-            
-
-        </article>
-        
-
-        <article>
-            
-            <h4>California Art Classes, CA</h4>
-            <h5><time datetime = "2013-09-00">September 2013</time> to <time datetime = "2023-08-00">August 2023</time></h5>
-            <ul>
-                <li><p>Advanced Sketching, Oil Paint, and Color Theory Principles</p></li>
-            </ul>
+                    <ul>
+                        <li>
+                            <p>Understanding of the principles, theory, and analysis of data science with experience in
+                                Python’s “pandas” library, PyTorch, Java, R, SQL, HTML/CSS, Javascript</p>
+                        </li>
+                        <li>
+                            <p>Learning conceptual theories and mathematical foundations underlying Machine Learning,
+                                Natural Language Models, and Neural Networks</p>
+                        </li>
+                        <li>
+                            <p>Conceptual Algorithm skills: runtime and data structure evaluation, doctest construction
+                            </p>
+                        </li>
+                        <li>
+                            <p>Collaborated in research project proposal and data science projects that involved data
+                                collection, example data generation, experiment construction, hypothesis testing, report
+                                writing and result presentation</p>
+                        </li>
+                        <li>
+                            <p>Completed upper level courses in statistical methods, quantitative methods and
+                                statistical
+                                techniques for analyzing big data, data management</p>
+                        </li>
+                        <li>
+                            <p>Experience in Github for Team-based and Individual projects</p>
+                        </li>
+                        <li>
+                            <p>Future courses: data mining, modeling, visualization, systems for scalable analytics</p>
+                        </li>
 
 
-        </article>
-       
-    </section>
+                    </ul>
 
-    <section>
-        <h2>Achievements</h2>
-
-        <ul>
-            <li><p>Principal’s Awards, Perfect Attendance Awards</p></li>
-            <li><p>Middle School Valedictorian</p></li>
-        </ul>
+                </article>
 
 
-    </section>
 
-    <section>
-        <h2>Work Experience</h2>
 
-        <article>
+                <article>
 
-            <h4>Illustration</h4>
-            <h5>Freelance Graphics Artist</h5>
+                    <h4>California High School, CA</h4>
+                    <h5>Graduated: <time datetime="2023-06-00">June 2023</time></h5>
+                    <h5>GPA: 4.34</h5>
 
-            <ul>
-                <li><p>Designed and developed graphics for various development studios</p></li>
-                <li><p>Attuned to large team-communications and strict deadlines for deliverables</p></li>
-            </ul>
+                    <ul>
+                        <li>
+                            <p>App Academy <time datetime="2019-08-00">August 2019</time> to <time
+                                    datetime="2023-08-00">2023</time></p>
+                        </li>
+                        <li>
+                            <p>Math Club <time datetime="2019-08-00">August 2017</time> to <time
+                                    datetime="2021-05-00">May
+                                    2021</time></p>
+                        </li>
+                        <li>
+                            <p>Tennis Team <time datetime="2019-08-00">August 2019</time> to <time
+                                    datetime="2020-03-00">March 2020</time></p>
+                        </li>
+                    </ul>
 
-        </article>
-        
-        <article>
 
-            <h4>UC California</h4>
-            
-            <ul>
-                <li><p>Designed Stickers distributed by the Student Center for Fall Quarter 2024</p></li>
-                
-            </ul>
+                </article>
 
-        </article>
-        
 
-    </section>
+                <article>
 
-    <section>
-        <h2>Soft Skills</h2>
+                    <h4>California Art Classes, CA</h4>
+                    <h5><time datetime="2013-09-00">September 2013</time> to <time datetime="2023-08-00">August
+                            2023</time>
+                    </h5>
+                    <ul>
+                        <li>
+                            <p>Advanced Sketching, Oil Paint, and Color Theory Principles</p>
+                        </li>
+                    </ul>
 
-        <ul>
-            <li><p>Persistence - strong drive to accomplish tasks and overcome problems.</p></li>
-            <li><p>Friendliness - To treat everyone equally with respect is an utmost priority.</p></li>
-            <li><p>Flexible - Very open to requests to implement changes.</p></li>
-            <li><p>Adaptable - determined to learn and improve with alternative approaches.</p></li>
-            <li><p>Vocal - openly communicative and confident in speaking</p></li>
-            <li><p>Disciplined - Proponent of practice and deadlines; experience in busy course workloads and time management</p></li>
-            <li><p>Attentive - Quick learner to new skills and activities.</p></li>
-        </ul>
 
-    </section>
+                </article>
+            </section>
 
-    <section>
-        <h2>Technical Skills</h2>
 
-        <ul>
-            <li><p>Intermediate Experience in Python - 2 Years</p></li>
-            <li><p>Python’s “pandas” library - 2 Years: Obtaining, Combining, Cleaning, Exploring, Querying, and Editing datasets</p></li>
-            <li><p>Intermediate Experience in Java - 1 Year</p></li>
-            <li><p>Basic PyTorch, R, SQL, HTML/CSS,  Javascript</p></li>
-            <li><p>Experienced in Digital Art Program “Clip Studio Paint” - 4+ years</p></li>
-            <li><p>Experienced in editing and writing documents - Microsoft Word, Google Docs, Spreadsheet, or Python code.</p></li>
-            <li><p>Proficient in learning software/ functionality</p></li>
-        </ul>
+            <section>
+                <h2>Achievements</h2>
 
-    </section>
+                <ul>
+                    <li>
+                        <p>Principal’s Awards, Perfect Attendance Awards</p>
+                    </li>
+                    <li>
+                        <p>Middle School Valedictorian</p>
+                    </li>
+                </ul>
+
+
+            </section>
+
+            <section>
+                <h2>Work Experience</h2>
+
+                <article>
+
+                    <h4>Illustration</h4>
+                    <h5>Freelance Graphics Artist</h5>
+
+                    <ul>
+                        <li>
+                            <p>Designed and developed graphics for various development studios</p>
+                        </li>
+                        <li>
+                            <p>Attuned to large team-communications and strict deadlines for deliverables</p>
+                        </li>
+                    </ul>
+
+                </article>
+
+                <article>
+
+                    <h4>UC California</h4>
+
+                    <ul>
+                        <li>
+                            <p>Designed Stickers distributed by the Student Center for Fall Quarter 2024</p>
+                        </li>
+
+                    </ul>
+
+                </article>
+            </section>
+
+
+        </section>
+        <section class='skills'>
+            <section>
+                <h2>Soft Skills</h2>
+
+                <ul>
+                    <li>
+                        <p>Persistence - strong drive to accomplish tasks and overcome problems.</p>
+                    </li>
+                    <li>
+                        <p>Friendliness - To treat everyone equally with respect is an utmost priority.</p>
+                    </li>
+                    <li>
+                        <p>Flexible - Very open to requests to implement changes.</p>
+                    </li>
+                    <li>
+                        <p>Adaptable - determined to learn and improve with alternative approaches.</p>
+                    </li>
+                    <li>
+                        <p>Vocal - openly communicative and confident in speaking</p>
+                    </li>
+                    <li>
+                        <p>Disciplined - Proponent of practice and deadlines; experience in busy course workloads and
+                            time
+                            management</p>
+                    </li>
+                    <li>
+                        <p>Attentive - Quick learner to new skills and activities.</p>
+                    </li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h2>Technical Skills</h2>
+
+                <ul>
+                    <li>
+                        <p>Intermediate Experience in Python - 2 Years</p>
+                    </li>
+                    <li>
+                        <p>Python’s “pandas” library - 2 Years: Obtaining, Combining, Cleaning, Exploring, Querying, and
+                            Editing datasets</p>
+                    </li>
+                    <li>
+                        <p>Intermediate Experience in Java - 1 Year</p>
+                    </li>
+                    <li>
+                        <p>Basic PyTorch, R, SQL, HTML/CSS, Javascript</p>
+                    </li>
+                    <li>
+                        <p>Experienced in Digital Art Program “Clip Studio Paint” - 4+ years</p>
+                    </li>
+                    <li>
+                        <p>Experienced in editing and writing documents - Microsoft Word, Google Docs, Spreadsheet, or
+                            Python code.</p>
+                    </li>
+                    <li>
+                        <p>Proficient in learning software/ functionality</p>
+                    </li>
+                </ul>
+
+            </section>
+        </section>
+    </div>
 
 </body>
+
 </html>
