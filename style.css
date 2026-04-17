@@ -1,5 +1,6 @@
 :root {
     --color-accent: oklch(80% 0.11 295);
+    
 }
 
 body {
@@ -27,15 +28,30 @@ body {
 
 }
 
+.color-scheme {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+
+    font-size: 80%;
+    font-family: inherit;
+}
+
 ul,
 li {
     display: contents;
 }
 
 nav {
+
+    --border-color: oklch(50% 10% 200 / 40%);
+    
     display: flex;
     margin-bottom: 2em;
-    border-bottom: 1px solid oklch(80% 3% 200);
+    /* oklch(80% 3% 200) */
+    border-bottom: 1px solid ;
+
+    border-bottom-color: var(--border-color);
 
 
     a {
@@ -46,7 +62,7 @@ nav {
         padding: 0.5em;
 
         &:hover {
-            background-color: oklch(from var(--color-accent) 95% 5% h);
+            background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
             border-bottom: 0.4em solid var(--color-accent);
             padding-bottom: 0.1em;
         }
@@ -111,7 +127,7 @@ form {
     h4 {
         border-left: 0.4em solid var(--color-accent);
         padding: 0.5em;
-        background-color: oklch(from var(--color-accent) 97% 2% h);
+        background-color: color-mix(in oklch, var(--color-accent) 15%, canvas 0%);
     }
     time {
         color: oklch(from var(--color-accent) 50% 70% h);;
@@ -130,3 +146,4 @@ form {
         grid-column:5/8;
         grid-row:1/10;
 }
+
