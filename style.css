@@ -71,7 +71,7 @@ nav {
 
 
     .current {
-        border-bottom: 0.4em solid oklch(90% 3% 200);
+        border-bottom: 0.4em solid var(--border-color);
         padding-bottom: 0.1em;
 
     }
