@@ -64,10 +64,13 @@ document.body.insertAdjacentHTML(
 );
 
 let theme_select = document.querySelector(".color-scheme")
+theme_select.style.font = 'inherit';
+
 
 if ("colorScheme" in localStorage) {
     document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
-    theme_select.value = localStorage.colorScheme;
+    theme_select.querySelector('select').value = localStorage.colorScheme;
+    
     console.log(theme_select.value);
     
 };
