@@ -71,13 +71,13 @@ if ("colorScheme" in localStorage) {
     document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
     theme_select.querySelector('select').value = localStorage.colorScheme;
     
-    console.log(theme_select.value);
+    // console.log(theme_select.value);
     
 };
 
 
 theme_select.addEventListener('input', function (event){
-    // console.log('color scheme changed to ', event.target.value)
+    console.log('color scheme changed to ', event.target.value)
 
     document.documentElement.style.setProperty('color-scheme', event.target.value);
     localStorage.colorScheme = event.target.value;
