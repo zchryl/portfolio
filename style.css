@@ -1,6 +1,6 @@
 :root {
     --color-accent: oklch(80% 0.11 295);
-    
+
 }
 
 body {
@@ -16,22 +16,28 @@ body {
 
 
     /* 4.4 Finishing Touches */
-    h1, h2, h3,h4,h5,h6{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         line-height: 1.1;
         text-wrap: balance;
-    
+
     }
+
     h1 {
-        font-size:400%;
-        
+        font-size: 400%;
+
     }
 
 }
 
 .color-scheme {
-    position:absolute;
-    top:1rem;
-    right:1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 
     font-size: 80%;
     font-family: inherit;
@@ -45,11 +51,11 @@ li {
 nav {
 
     --border-color: oklch(50% 10% 200 / 40%);
-    
+
     display: flex;
     margin-bottom: 2em;
     /* oklch(80% 3% 200) */
-    border-bottom: 1px solid ;
+    border-bottom: 1px solid;
 
     border-bottom-color: var(--border-color);
 
@@ -80,70 +86,109 @@ nav {
 
 form {
     display: grid;
-    grid-template-columns:auto 1fr;
-    gap:1em;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
 
     label {
-        display:grid;
+        display: grid;
         grid-template-columns: subgrid;
 
     }
-    label, button {
+
+    label,
+    button {
         grid-column: 1 / -1;
 
     }
-    input, textarea, button{
-        font:inherit;
+
+    input,
+    textarea,
+    button {
+        font: inherit;
     }
-    
+
 }
 
 .projects {
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em,1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     gap: 1em;
-    
+
     article {
-        display:grid;
-        grid-template-rows:subgrid;
+        display: grid;
+        grid-template-rows: subgrid;
         grid-row: span 3;
-        
+
     }
 
-    h2{
-        margin:0;
+    h2 {
+        margin: 0;
     }
 }
+
 .resume {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    grid-gap:1.5em;
+    grid-gap: 1.5em;
     height: auto;
 
     h2 {
         border-bottom: 0.2em solid var(--color-accent);
     }
+
     h4 {
         border-left: 0.4em solid var(--color-accent);
         padding: 0.5em;
         background-color: color-mix(in oklch, var(--color-accent) 15%, canvas 0%);
     }
+
     time {
-        color: oklch(from var(--color-accent) 50% 70% h);;
+        color: oklch(from var(--color-accent) 50% 70% h);
+        ;
     }
 
-    section{
+    section {
         margin-bottom: 3em;
     }
-    
-}
-.left {
-        grid-column:1/5;
-        grid-row:1/10;
-}
-.skills {
-        grid-column:5/8;
-        grid-row:1/10;
+
 }
 
+.left {
+    grid-column: 1/5;
+    grid-row: 1/10;
+}
+
+.skills {
+    grid-column: 5/8;
+    grid-row: 1/10;
+}
+
+/* Github Stats */
+#git {
+    margin-bottom: 0;
+}
+
+#profile-stats {
+    display: grid;
+
+
+    dl {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    dt {
+        grid-row: 1;
+    }
+
+    dd {
+        grid-row: 2;
+        margin: 0;
+        font-size: 200%;
+    }
+
+
+
+
+}

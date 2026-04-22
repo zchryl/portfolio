@@ -18,10 +18,10 @@ function $$(selector, context = document) {
 // }
 
 let pages = [
-    { url: 'index.html', title: 'Home'},
-    { url: 'projects/index.html', title: 'Projects'},
-    { url: 'resume/index.html', title: 'Resume'},
-    { url: 'contact/index.html', title: 'Contact Me'},
+    { url: 'index.html', title: 'Home' },
+    { url: 'projects/index.html', title: 'Projects' },
+    { url: 'resume/index.html', title: 'Resume' },
+    { url: 'contact/index.html', title: 'Contact Me' },
 ];
 
 let nav = document.createElement('nav');
@@ -29,8 +29,8 @@ document.body.prepend(nav);
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
 
-? "/" 
-: "/portfolio/" ;
+    ? "/"
+    : "/portfolio/";
 
 for (let p of pages) {
     let url = p.url;
@@ -41,7 +41,7 @@ for (let p of pages) {
     a.href = url;
     a.textContent = title;
 
-    if (a.host === location.host && a.pathname === location.pathname){
+    if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add('current');
     };
 
@@ -51,7 +51,7 @@ for (let p of pages) {
 document.body.insertAdjacentHTML(
     'afterbegin',
 
-        `
+    `
         <label class = "color-scheme">
             Theme:
             <select>
@@ -70,13 +70,13 @@ theme_select.style.font = 'inherit';
 if ("colorScheme" in localStorage) {
     document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
     theme_select.querySelector('select').value = localStorage.colorScheme;
-    
+
     // console.log(theme_select.value);
-    
+
 };
 
 
-theme_select.addEventListener('input', function (event){
+theme_select.addEventListener('input', function (event) {
     console.log('color scheme changed to ', event.target.value)
 
     document.documentElement.style.setProperty('color-scheme', event.target.value);
@@ -85,20 +85,94 @@ theme_select.addEventListener('input', function (event){
 
 let form_select = document.querySelector("form");
 
-form_select?.addEventListener('submit',function(event){
+form_select?.addEventListener('submit', function (event) {
     event.preventDefault()
 
     let data = new FormData(form_select);
 
     let out_url = `${form_select.action}?`;
 
-    for (let [name,value] of data){
+    for (let [name, value] of data) {
         console.log(name, encodeURIComponent(value));
         out_url += name + '=' + encodeURIComponent(value) + '&'
     }
-    
+
     console.log(out_url);
     location.href = out_url;
 }
 
 );
+
+// LAB 04 
+// step 1.2
+export async function fetchJSON(url) {
+    try {
+        // Fetch the JSON file from the given URL
+        const response = await fetch(url);
+
+        // Handling Errors
+        if (!response.ok) {
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+        // console.log(response);
+
+        const data = await response.json();
+        console.log(data);
+
+        return data;
+
+
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+    }
+}
+
+
+// fetchJSON('../lib/projects.json')
+
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+
+    // console.log(typeof project);
+    // console.log(project);
+
+    if (!containerElement) {
+        throw new Error(`renderProjects target container ${containerElement} does not exist.`);
+    }
+    if (!['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(headingLevel)) {
+        throw new Error(`renderProjects headingLevel is not a valid heading.`);
+    }
+
+    // clears existing content
+    containerElement.innerHTML = '';
+
+    for (const proj of project) {
+
+        const article = document.createElement('article');
+        // console.log(p);
+        containerElement.appendChild(article);
+
+        if (!proj.title) {
+            proj.title = 'Missing title'; 
+        }
+        if (!proj.image) {
+            proj.image = 'Missing title'; 
+        }
+        if (!proj.description) {
+            proj.description = 'Missing description'; 
+        }
+
+        
+
+        article.innerHTML = `
+        <${headingLevel}>${proj.title}</${headingLevel}>
+        <img src = "${proj.image}" alt="${proj.title}">
+        <p>${proj.description}</p>
+    
+    `;
+
+    }
+}
+
+export async function fetchGitHubData(username) {
+    return fetchJSON(`https://api.github.com/users/${username}`);
+} 
