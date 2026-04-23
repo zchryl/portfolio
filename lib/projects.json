@@ -1,9 +1,9 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "year": "2024",
+        "title": "Position Analysis in League of Legends",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint voluptate enim aliquam omnis nisi eum, distinctio qui ullam similique, quisquam corporis dolorum nostrum magnam, earum saepe voluptatum mollitia eos amet?"
+        "description": "League of Legends is a highly competitive, role based game of teamwork. This project analyzes a dataset on the majority of League of Legends competitive matches in 2025 and explores predicting a player's distinct role on the team - based on their post game performance. This project involves the many stages of conducting a data analysis project. https://zchryl.github.io/Position-Analysis-in-League/"
     },
     {
         "title": "Odit repellat nihil soluta!",
