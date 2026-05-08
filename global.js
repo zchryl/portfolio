@@ -22,6 +22,8 @@ let pages = [
     { url: 'projects/index.html', title: 'Projects' },
     { url: 'resume/index.html', title: 'Resume' },
     { url: 'contact/index.html', title: 'Contact Me' },
+    { url: 'meta/index.html', title: 'Meta' },
+    { url: 'https://github.com/zchryl', title: 'GitHub' },
 ];
 
 let nav = document.createElement('nav');
