@@ -154,22 +154,23 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
         containerElement.appendChild(article);
 
         if (!proj.title) {
-            proj.title = 'Missing title'; 
+            proj.title = 'Missing title';
         }
         if (!proj.image) {
-            proj.image = 'Missing title'; 
+            proj.image = 'Missing title';
         }
         if (!proj.description) {
-            proj.description = 'Missing description'; 
+            proj.description = 'Missing description';
         }
 
-        
+
 
         article.innerHTML = `
         <${headingLevel}>${proj.title}</${headingLevel}>
         <img src = "${proj.image}" alt="${proj.title}">
         <div>
             <p>${proj.description}</p>
+            <a href = "${proj.url}" target="_blank">View Project</a>
             <p style = 'font-family:Baskerville; font-variant-numeric: oldstyle-nums'>${proj.year}<p>
         </div>
     
