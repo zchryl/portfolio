@@ -262,6 +262,11 @@ path {
 
 /* meta */
 #stats {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    height: 15vh;
     display: grid;
 
 
@@ -328,10 +333,11 @@ dl.info[hidden]:not(:hover, :focus-within) {
     opacity: 0;
     visibility: hidden;
 }
-#language-breakdown{
+
+#language-breakdown {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+
     dt {
         grid-row: 1;
         margin: 0;
@@ -347,29 +353,133 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 circle {
-    transition: 200ms;
+    transition: all 200ms, r calc(var(--r) * 100ms);
     transform-origin: center;
     transform-box: fill-box;
+
+    @starting-style {
+        r: 0;
+    }
 }
 
 circle:hover {
     transform: scale(1.5);
 }
 
-circle.selected{
+circle.selected {
     fill: #ff6b6b;
 }
 
 @keyframes marching-ants {
-  to {
-    stroke-dashoffset: -8; /* 5 + 3 */
-  }
+    to {
+        stroke-dashoffset: -8;
+        /* 5 + 3 */
+    }
 }
 
 .selection {
-  fill-opacity: 0.1;
-  stroke: black;
-  stroke-opacity: 0.7;
-  stroke-dasharray: 5 3;
-  animation: marching-ants 2s linear infinite;
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+
+#files {
+    position: sticky;
+    top: 7em;
+    left: 0;
+    bottom: 0;
+    /* height: 90vh; */
+    align-content: start;
+    align-self: start;
+
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    row-gap: 0px;
+
+    >div {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: subgrid;
+        padding: 5px;
+    }
+
+    dt {
+        grid-column: 1;
+        margin: 0;
+        line-height: 1;
+        font-size: .7rem;
+    }
+
+    dd {
+        grid-column: 2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        align-content: start;
+        gap: 0.15em;
+        /* padding-top: 0.1em; */
+
+        font-size: 0.5rem;
+
+    }
+}
+
+.loc {
+    display: flex;
+    width: 0.5em;
+    aspect-ratio: 1;
+    background: steelblue;
+    border-radius: 50%;
+
+
+    background-color: var(--color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+
+}
+
+#scrolly-1 {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+
+    >* {
+        flex: 1;
+    }
+
+
+}
+
+#scrolly-1 .step:first-child {
+    opacity: 1;
+}
+
+#scatter-story {
+    position: relative;
+}
+
+#scatter-plot {
+    position: sticky;
+    top: 5em;
+    left: 0;
+    bottom: 0;
+    height: 70vh;
+}
+
+.step {
+    padding-bottom: 1em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#commit-time {
+    position: sticky;
+    height: 90vh;
+    top: 6em;
+    left: 0;
+    bottom: 0;
+
 }
